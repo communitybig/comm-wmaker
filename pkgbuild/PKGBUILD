@@ -1,9 +1,59 @@
-# Maintainer: Tales A. Mendonça <talesam@gmail.com>
+# Maintainer: Rafael Ruscher <rruscher@gmail.com>
 
-pkgname=pkgbuild-template
-pkgdesc="Package template for Communitybig"
+pkgname=comm-wmaker
+pkgdesc="Meta Package WindowMaker"
 # Uncomment and edit the following lines as needed
-#depends=('')
+depends=(
+windowmaker
+lxdm
+lxdm-biglinux-theme
+qt5ct
+tango-icon-theme
+biglinux-skel-wmaker
+numlockx
+onboard
+mousetweaks
+polkit
+polkit-kde-agent
+autoconf
+imake
+brave-browser
+dolphin
+rootactions-servicemenu-biglinux
+libreoffice-fresh
+xterm
+konsole
+helvum
+kate
+kcalc
+xorg-fonts-cyrillic
+xorg-mkfontscale
+network-manager-applet
+wmclock
+wmsystemtray
+wmix
+wmmemload
+wmnd
+wmautomenu-biglinux
+lxrandr
+notification-daemon
+pamac-tray-icon-plasma
+ark
+xorg-xkill
+bluedevil
+manjaro-settings-manager
+gwenview
+spectacle
+clipit
+volumeicon
+hardinfo-gtk3
+okular
+xfce4-settings
+xfce4-appfinder
+xfce4-notifyd
+xfce4-taskmanager
+chili-utils
+)
 #makedepends=('')
 #optdepends=('')
 #conflicts=('')
