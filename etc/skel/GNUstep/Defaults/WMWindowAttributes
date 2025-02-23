@@ -1,0 +1,31 @@
+{
+  dolphin.dolphin = {
+    AlwaysUserIcon = Yes;
+    Icon = "file-manager.png";
+  };
+  soffice.Soffice = {
+    Icon = soffice.Soffice.xpm;
+  };
+  "brave-browser.brave.com,Chromium-browser" = {
+    AlwaysUserIcon = Yes;
+    Icon = browser.png;
+  };
+  kcalc.kcalc = {
+    AlwaysUserIcon = Yes;
+    Icon = "accessories-calculator.png";
+  };
+  kate.kate = {
+    AlwaysUserIcon = Yes;
+    Icon = kedit.png;
+  };
+  "pamac-manager.Pamac-manager" = {
+    Icon = "pamac-manager.Pamac-manager.xpm";
+  };
+  Logo.WMDock = {
+    AlwaysUserIcon = Yes;
+    Icon = biglinux.png;
+  };
+  "polkit-kde-authentication-agent-1.polkit-kde-authentication-agent-1" = {
+    Icon = "polkit-kde-authentication-agent-1.polkit-kde-authentication-agent-1.xpm";
+  };
+}

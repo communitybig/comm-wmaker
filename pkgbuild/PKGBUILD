@@ -5,6 +5,7 @@ pkgdesc="Meta Package WindowMaker"
 # Uncomment and edit the following lines as needed
 depends=(
 windowmaker
+windowmaker-extra
 lxdm
 lxdm-biglinux-theme
 qt5ct
