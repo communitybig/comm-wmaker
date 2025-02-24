@@ -53,6 +53,11 @@ xfce4-appfinder
 xfce4-notifyd
 xfce4-taskmanager
 chili-utils
+noto-fonts-emoji
+grub-btrfs
+grub-btrfs-timeshift
+timeshift
+bash-completion
 )
 #makedepends=('')
 #optdepends=('')
