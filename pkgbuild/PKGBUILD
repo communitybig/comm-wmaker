@@ -111,7 +111,7 @@ package() {
     local dirs=("usr" "etc" "opt")
     for dir in "${dirs[@]}"; do
         if [ -d "${srcdir}/${dir}" ]; then
-            cp -a "${srcdir}/${dir}" "${pkgdir}/"
+            cp -r "${srcdir}/${dir}" "${pkgdir}/"
         fi
     done
 

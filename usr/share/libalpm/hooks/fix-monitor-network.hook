@@ -1,0 +1,10 @@
+[Trigger]
+Type = Path
+Operation = Install
+Operation = Upgrade
+Target = usr/lib/libsnmp.so
+
+[Action]
+Description = Network monitor correction
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/fix-monitor-network

@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = windowmaker
+
+[Action]
+Description = Updating wmaker-session with custom script
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/wmaker-session-update-script

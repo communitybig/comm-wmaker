@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+wmakerSessionBig="/usr/bin/wmaker-session-big"
+wmakerSessionBin="/usr/bin/wmaker"
+wrapperScript="/usr/bin/startwmaker-biglinux"
+
+# Renomeia o binário original, se ainda não foi renomeado
+if [ -f "$wmakerSessionBin" ] && [ ! -f "$wmakerSessionBig" ]; then
+	mv -f "$wmakerSessionBin" "$wmakerSessionBig"
+fi
+
+# Copia o script wrapper para substituir o wmaker-session
+cp -f "$wrapperScript" "$wmakerSessionBin"
+chmod +x "$wmakerSessionBin"

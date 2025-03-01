@@ -1,156 +1,156 @@
 (
   BigLinux,
-  (Aplicativos, OPEN_MENU, "~/GNUstep/Defaults/xdg_menu"),
-  ("Procurar Aplicativos", EXEC, "xfce4-appfinder"),
+  (Applications, OPEN_MENU, "~/GNUstep/Defaults/xdg_menu"),
+  ("Search for Apps", EXEC, "xfce4-appfinder"),
   (
     WindowMaker,
     (
       "Apar\303\252ncia",
       (
-        Temas,
+        Themes,
         OPEN_MENU,
         "-noext /usr/share/WindowMaker/Themes $HOME/GNUstep/Library/WindowMaker/Themes WITH setstyle"
       ),
       (
-        Estilos,
+        Styles,
         OPEN_MENU,
         "-noext /usr/share/WindowMaker/Styles $HOME/GNUstep/Library/WindowMaker/Styles WITH setstyle"
       ),
       (
-        "\303\215cones",
+        "Icons",
         OPEN_MENU,
         "-noext /usr/share/WindowMaker/IconSets $HOME/GNUstep/Library/WindowMaker/IconSets WITH seticons"
       ),
       (
-        "Plano de fundo",
+        "Background",
         (
-          "S\303\263lido",
+          "Solid",
           (
-            Preto,
+            Black,
             EXEC,
             "wdwrite WindowMaker WorkspaceBack '(solid, \"black\")'"
           ),
           (
-            "Ametista escuro",
+            "Dark amethyst",
             EXEC,
             "wdwrite WindowMaker WorkspaceBack '(solid, \"#505075\")'"
           ),
           (
-            Anil,
+            Indigo,
             EXEC,
             "wdwrite WindowMaker WorkspaceBack '(solid, \"#243e6c\")'"
           ),
           (
-            Turquesa,
+            Turquoise,
             EXEC,
             "wdwrite WindowMaker WorkspaceBack '(solid, \"#243e6c\")'"
           ),
           (
-            "P\303\272rpura",
+            "Purple",
             EXEC,
             "wdwrite WindowMaker WorkspaceBack '(solid, \"#554466\")'"
           ),
           (
-            Pardo,
+            Brown,
             EXEC,
             "wdwrite WindowMaker WorkspaceBack '(solid, \"wheat4\")'"
           ),
           (
-            "Cinza escuro",
+            "Dark grey",
             EXEC,
             "wdwrite WindowMaker WorkspaceBack '(solid, \"#333340\")'"
           ),
           (
-            Vinho,
+            Wine,
             EXEC,
             "wdwrite WindowMaker WorkspaceBack '(solid, \"#400020\")'"
           )
         ),
         (
-          "Degrad\303\252",
+          "Gradient",
           (
-            "P\303\264r do sol",
+            "Sunset",
             EXEC,
             "wdwrite WindowMaker WorkspaceBack '(mvgradient, deepskyblue4, black, deepskyblue4, tomato4)'"
           ),
           (
-            "C\303\251u",
+            "Sky",
             EXEC,
             "wdwrite WindowMaker WorkspaceBack '(vgradient, \"blue4\", \"white\"'"
           ),
           (
-            "Ametista escuro",
+            "Dark Amethyst",
             EXEC,
             "wdwrite WindowMaker WorkspaceBack '(vgradient, \"#7080a5\", \"#101020\"'"
           ),
           (
-            Anil,
+            Indigo,
             EXEC,
             "wdwrite WindowMaker WorkspaceBack '(vgradient, \"#746ebc\", \"#242e4c\"'"
           ),
           (
-            "P\303\272rpura",
+            "Purple",
             EXEC,
             "wdwrite WindowMaker WorkspaceBack '(vgradient, \"#654c66\", \"#151426\"'"
           ),
           (
-            Pardo,
+            Brown,
             EXEC,
             "wdwrite WindowMaker WorkspaceBack '(vgradient, \"#a09060\", \"#302010\"'"
           ),
           (
-            "Cinza Escuro",
+            "Dark grey",
             EXEC,
             "wdwrite WindowMaker WorkspaceBack '(vgradient, \"#636380\", \"#131318\"'"
           ),
           (
-            Vinho,
+            Wine,
             EXEC,
             "wdwrite WindowMaker WorkspaceBack '(vgradient, \"#600040\", \"#180010\"'"
           )
         ),
         (
-          Imagens,
+          Images,
           OPEN_MENU,
           "-noext /usr/share/wallpapers/ WITH wmsetbg -u "
         )
       ),
       (
-        "Salvar tema",
+        "Save theme",
         EXEC,
         "getstyle -p \"%a(Theme name, Name to save theme as)\""
       ),
       (
-        "Salvar \303\255cones",
+        "Save icons",
         SHEXEC,
         "geticonset $HOME/GNUstep/Library/WindowMaker/IconSets/\"%a(IconSet name,Name to save icon set as)\""
       )
     ),
-    (Lupa, EXEC, wmagnify),
-    ("Captura de Tela", SHORTCUT, Print, EXEC, spectacle),
-    ("\303\201reas de trabalho", WORKSPACE_MENU),
+    (Land, EXEC, wmagnify),
+    ("Print Screen", SHORTCUT, Print, EXEC, spectacle),
+    ("Desktop", WORKSPACE_MENU),
     (
-      "\303\201rea de trabalho",
-      ("Minimizar janelas", HIDE_OTHERS),
-      ("Maximizar janelas", SHOW_ALL),
-      ("Organizar \303\255cones", ARRANGE_ICONS),
-      (Atualizar, REFRESH),
-      ("Salvar sess\303\243o", SAVE_SESSION),
-      ("Reiniciar sess\303\243o", CLEAR_SESSION)
+      "Desktop",
+      ("Minimize windows", HIDE_OTHERS),
+      ("Maximize windows", SHOW_ALL),
+      ("Arrange Icons", ARRANGE_ICONS),
+      (To update, REFRESH),
+      ("Save session", SAVE_SESSION),
+      ("Restart session", CLEAR_SESSION)
     ),
     (
-      "Configurar WindowMaker",
+      "Configure Window Maker",
       EXEC,
       "/usr/lib/GNUstep/Applications/WPrefs.app/WPrefs"
     ),
-    ("Painel de informa\303\247\303\265es", INFO_PANEL),
-    ("Reiniciar Window Maker", RESTART),
-    ("Sair do Window Maker", EXIT)
+    ("Information panel", INFO_PANEL),
+    ("Restart Window Maker", RESTART),
+    ("Exit Window Maker", EXIT)
   ),
-  (Terminal, SHORTCUT, "Control+Mod1+t", EXEC, xterm),
-  ("Finalizar Xkill", SHORTCUT, "Control+Mod1+Escape", EXEC, xkill),
-  (Executar..., EXEC, "%A(Executar, digite o comando:)"),
+  (Terminal, SHORTCUT, "Control+Mod1+t", EXEC, xfce4-terminal),
+  ("Finish Xkill", SHORTCUT, "Control+Mod1+Escape", EXEC, xkill),
+  (To execute..., EXEC, "%A(Run, enter the command:)"),
   (Logout, EXIT),
-  (Reiniciar, EXEC, reboot),
-  (Desligar, EXEC, "shutdown now")
+  (Reboot, EXEC, reboot),
+  (Shut Down, EXEC, "shutdown now")
 )

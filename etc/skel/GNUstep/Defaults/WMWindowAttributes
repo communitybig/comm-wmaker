@@ -1,22 +1,21 @@
 {
-  dolphin.dolphin = {
+  thunar.Thunar = {
     AlwaysUserIcon = Yes;
-    Icon = "file-manager.png";
+    Icon = thunar.svg;
   };
-  soffice.Soffice = {
-    Icon = soffice.Soffice.xpm;
+  office.Office = {
+    Icon = office.svg;
   };
-  "brave-browser.brave.com,Chromium-browser" = {
+  brave.Brave = {
+    Icon = brave.svg;
+  };
+  mousepad.Mousepad = {
     AlwaysUserIcon = Yes;
-    Icon = browser.png;
+    Icon = editor.svg;
   };
-  kcalc.kcalc = {
+  galculator.Galculator = {
     AlwaysUserIcon = Yes;
-    Icon = "accessories-calculator.png";
-  };
-  kate.kate = {
-    AlwaysUserIcon = Yes;
-    Icon = kedit.png;
+    Icon = "calc.svg";
   };
   "pamac-manager.Pamac-manager" = {
     Icon = "pamac-manager.Pamac-manager.xpm";
