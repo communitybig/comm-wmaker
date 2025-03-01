@@ -58,6 +58,7 @@ grub-btrfs
 grub-btrfs-timeshift
 timeshift
 bash-completion
+big-skel
 )
 #makedepends=('')
 #optdepends=('')
