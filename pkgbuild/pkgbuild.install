@@ -28,19 +28,20 @@ post_install() {
 
 	[[ -e /etc/environment ]] && source /etc/environment
 	: "${IN_CHROOT_INSTALLER:=false}"
+	: "${IN_CHROOT_INSTALLER_USER:=root}"
 
 	if [[ -f /var/lib/pacman/db.lck ]]; then
 		rm -f /var/lib/pacman/db.lck &>/dev/null
 	fi
 
 	# Common packages for all GPUs
-	COMMON_PACKAGES=(
-		mhwd-biglinux
-		mesa
-		lib32-mesa
-		vulkan-mesa-layers
-		lib32-vulkan-mesa-layers
-	)
+#	COMMON_PACKAGES=(
+#		mhwd-biglinux
+#		mesa
+#		lib32-mesa
+#		vulkan-mesa-layers
+#		lib32-vulkan-mesa-layers
+#	)
 
 	install_packages() {
 		pacman -S --quiet --noconfirm --needed --overwrite \* "$@" &>/dev/null
@@ -103,22 +104,22 @@ EOF
 	mkdir -p /var/lib/lxdm >/dev/null
 	chown -R lxdm:lxdm /var/lib/lxdm >/dev/null
 
-	# Configure dotfiles and user settings
-	msg "Setting up dotfiles symlinks..."
-	user=$(awk -F: '$3 >= 1000 && $3 < 65000 { print $1; exit }' /etc/passwd)
+	msg "Setting up user..."
+	if ! $IN_CHROOT_INSTALLER; then
+  	user=$(awk -F: '$3 >= 1000 && $3 < 65000 { print $1; exit }' /etc/passwd)
+  else
+  	user=$IN_CHROOT_INSTALLER_USER
+  fi
 	user_home=$(getent passwd "$user" | cut -d: -f6)
-	#dotfiles_dir="$user_home/dotfiles"
 
-	# Ensure necessary directories exist
+	msg "Ensure necessary directories exist"
 	mkdir -p "$user_home/.backup" "$user_home/.config" &>/dev/null
 	chown "$user:$user" "$user_home/.backup" "$user_home/.config" &>/dev/null
 
-	# Copy dotfiles if they don't exist
-	msg "Copying dotfiles to $user_home..."
+	msg "Copying skel to $user_home..."
 	cp -r /etc/skel/.config/ "$user_home/" &>/dev/null
 	chown -R "$user:$user" "$user_home/.config" &>/dev/null
 
-	# Configure Nautilus
 	msg "Configuring Nautilus..."
 	if glib-compile-schemas /usr/share/glib-2.0/schemas/; then
 		msg "Nautilus schemas compiled successfully!"
