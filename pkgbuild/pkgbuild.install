@@ -16,7 +16,7 @@ post_install() {
     systemctl enable lxdm
 
     # Copia o conteúdo do skel para o diretório home do usuário
-    [[ -d "${srcdir}/${pkgname}/etc/skel" && -d "$HOME" ]] && cp -r "${srcdir}/${pkgname}/etc/skel"/. "$HOME/"
+    cp -r "/etc/skel"/. "$HOME/"
 }
 
 # Function executed before package upgrade
