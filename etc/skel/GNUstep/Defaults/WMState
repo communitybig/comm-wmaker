@@ -178,7 +178,7 @@
         Applications = (
           {
             Forced = No;
-            Name = brave.Brave;
+            Name = firefox.Firefox;
             DropCommand = "brave %d";
             BuggyApplication = No;
             AutoLaunch = No;
@@ -190,31 +190,31 @@
           },
           {
             Forced = No;
-            Name = thunar.Thunar;
-            DropCommand = "thunar %d";
+            Name = dolphin.dolphin;
+            DropCommand = "dolphin %d";
             BuggyApplication = No;
             AutoLaunch = No;
             Position = "0,2";
             Lock = Yes;
-            PasteCommand = "thunar %s";
-            Command = thunar;
+            PasteCommand = "dolphin %s";
+            Command = dolphin;
             Omnipresent = No;
           },
           {
             Forced = No;
-            Name = mousepad.Mousepad;
-            DropCommand = "mousepad %d";
+            Name = kate.kate;
+            DropCommand = "kate %d";
             BuggyApplication = No;
             AutoLaunch = No;
             Position = "0,4";
             Lock = Yes;
-            PasteCommand = "mousepad %s";
-            Command = mousepad;
+            PasteCommand = "kate %s";
+            Command = kate;
             Omnipresent = No;
           },
           {
             Forced = No;
-            Name = office.Office;
+            Name = soffice.Soffice;
             DropCommand = "soffice %d";
             BuggyApplication = No;
             AutoLaunch = No;
@@ -226,14 +226,14 @@
           },
           {
             Forced = No;
-            Name = galculator.Galculator;
-            DropCommand = "galculator %d";
+            Name = kcalc.kcalc;
+            DropCommand = "kcalc %d";
             BuggyApplication = No;
             AutoLaunch = No;
             Position = "0,3";
             Lock = Yes;
-            PasteCommand = "galculator %s";
-            Command = galculator;
+            PasteCommand = "kcalc %s";
+            Command = kcalc;
             Omnipresent = No;
           }
         );
@@ -241,7 +241,7 @@
         AutoAttractIcons = No;
         Lowered = Yes;
       };
-      Name = "Desktop 1";
+      Name = "\303\201rea de Trabalho 1";
     },
     {
       Clip = {
@@ -252,7 +252,7 @@
         AutoAttractIcons = No;
         Lowered = Yes;
       };
-      Name = "Desktop 2";
+      Name = "\303\201rea de Trabalho 2";
     }
   );
 }
