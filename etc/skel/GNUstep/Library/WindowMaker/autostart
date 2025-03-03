@@ -52,11 +52,16 @@ sleep 4
 sleep 10
 
 # Dock Apps
-wmnd &
-wmix &
-clipit &
-volumeicon &
-wmclock &
-wmsystemtray &
+wmnd &            # Monitor de rede (mostra tráfego up/down)
+wmix &            # Mixer de áudio estilo dock (controle de volume)
+clipit &          # Gerenciador de área de transferência
+volumeicon &      # Ícone de volume no system tray
+wmclock &         # Relógio analógico/digital para o dock
+wmsystemtray &    # System tray para ícones de aplicativos
+cbatticon &       # Monitor de bateria (ideal para laptops)
+wmsmpmon &        # Monitor de recursos (CPU/RAM/swap em tempo real)
+
+
+
 
 xset m 20/10 4

@@ -59,6 +59,13 @@ timeshift
 bash-completion
 firefox
 xfce4-terminal
+base-devel
+libx11
+libxext
+libxpm
+qt6-charts
+cbatticon
+wmsmpmon
 )
 #makedepends=('')
 #optdepends=('')
