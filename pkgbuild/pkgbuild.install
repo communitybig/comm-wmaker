@@ -114,7 +114,7 @@ EOF
 	mkdir -p "$user_home/.config" &>/dev/null
 
 	msg "Copying skel to $user_home..."
-	cp -rpa /etc/skel/.config/ "$user_home/" &>/dev/null
+	cp -Rpa /etc/skel/. "$user_home/" &>/dev/null
 
   msg "Setting user folder permissions in ${user_home}"
 	chown -R "$user:$user" "$user_home/.config" &>/dev/null
