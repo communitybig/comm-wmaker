@@ -1,13 +1,19 @@
 {
+  "xfce4-appfinder.Xfce4-appfinder" = {
+    Icon = "xfce4-appfinder.Xfce4-appfinder.xpm";
+  };
   dolphin.dolphin = {
     AlwaysUserIcon = Yes;
     Icon = "file-manager.png";
   };
   soffice.Soffice = {
-    Icon = "soffice.Soffice.xpm";
+    Icon = soffice.Soffice.xpm;
   };
   firefox.Firefox = {
-    Icon = "brave.brave.xpm";
+    Icon = brave.brave.xpm;
+  };
+  kwrite.kwrite = {
+    Icon = kwrite.kwrite.xpm;
   };
   kcalc.kcalc = {
     AlwaysUserIcon = Yes;

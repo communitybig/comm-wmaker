@@ -2,7 +2,6 @@ MenuBar=Disabled
 State=AAAA/wAAAAD9AAAAAwAAAAAAAADHAAACGfwCAAAAAvsAAAAUAHAAbABhAGMAZQBzAEQAbwBjAGsBAAAANAAAAhkAAABcAP////sAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAAIA////AAAAAQAAAAAAAAAA/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAAD/////AAAAAgD///8AAAADAAADfAAAALj8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAAAAADfAAAAAIA////AAACYwAAAhkAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
 
 [CompactMode]
-FontWeight=63
 IconSize=32
 PreviewSize=32
 
@@ -10,14 +9,9 @@ PreviewSize=32
 ShowCopyLocation=false
 ShowDuplicateHere=false
 ShowViewMode=false
-ShowCopyLocation=false
-ShowDuplicateHere=false
 
 [Desktop Entry]
 DefaultProfile=Perfil 1.profile
-
-[DetailsMode]
-FontWeight=63
 
 [Favorite Profiles]
 Favorites=
@@ -28,19 +22,20 @@ ConfirmClosingMultipleTabs=false
 GlobalViewProps=true
 RememberOpenedTabs=false
 ShowToolTips=true
-Version=200
+Version=202
 ViewPropsTimestamp=2018,12,13,5,31,1
 
 [IconsMode]
-FontWeight=63
 IconSize=48
 PreviewSize=48
 
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
 [MainWindow]
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAwAAAAAAAADHAAACGvwCAAAAAvsAAAAUAHAAbABhAGMAZQBzAEQAbwBjAGsBAAAAIAAAAhoAAAA8AP////sAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAAQA////AAAAAQAAAAAAAAAA/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAAD/////AAAABAD///8AAAADAAADLgAAALj8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAAAAADLgAAAAQA////AAAC8QAAAhoAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
 ToolBarsMovable=Disabled
-
 
 [Notification Messages]
 Nova abaNova abaCtrl+T=false

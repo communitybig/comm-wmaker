@@ -59,6 +59,8 @@ grub-btrfs-timeshift
 timeshift
 bash-completion
 big-skel
+firefox
+xfce4-terminal
 )
 #makedepends=('')
 #optdepends=('')
