@@ -10,7 +10,7 @@
     Icon = soffice.Soffice.xpm;
   };
   firefox.Firefox = {
-    Icon = brave.brave.xpm;
+    Icon = firefox.Firefox.xpm;
   };
   kwrite.kwrite = {
     Icon = kwrite.kwrite.xpm;
