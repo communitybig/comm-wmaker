@@ -40,8 +40,15 @@ if [ -n "$qemu" ]; then
     spice-vdagent -x &
 fi
 # There is a failure to start docks and systemtray, this if prevents this loading failure from happening
-killall wmnd wmix volumeicon clipit
+if pgrep wmnd; then killall wmnd; fi
+if pgrep wmix; then killall wmix; fi
+if pgrep clipit; then killall clipit; fi
+if pgrep volumeicon; then killall volumeicon; fi
 sleep 4
+
+# Espera um pouco mais para garantir que o ambiente gráfico esteja pronto
+sleep 10
+
 #Dock Network
 wmnd &
 #Dock Mixer
@@ -52,4 +59,3 @@ clipit &
 volumeicon &
 
 xset m 20/10 4
-
