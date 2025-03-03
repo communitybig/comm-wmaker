@@ -44,18 +44,19 @@ if pgrep wmnd; then killall wmnd; fi
 if pgrep wmix; then killall wmix; fi
 if pgrep clipit; then killall clipit; fi
 if pgrep volumeicon; then killall volumeicon; fi
+if pgrep wmclock; then killall wmclock; fi
+if pgrep wmsystemtray; then killall wmsystemtray; fi
 sleep 4
 
 # Espera um pouco mais para garantir que o ambiente gráfico esteja pronto
 sleep 10
 
-#Dock Network
+# Dock Apps
 wmnd &
-#Dock Mixer
 wmix &
-#Icon Systemtray Clipboard
 clipit &
-#Icon Systemtray Volume
 volumeicon &
+wmclock &
+wmsystemtray &
 
 xset m 20/10 4
