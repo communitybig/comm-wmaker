@@ -1,0 +1,69 @@
+"Aplicativos" MENU
+ "Acessórios" MENU
+  "Ark" EXEC ark 
+  "Chili clonedisk" EXEC xterm -e pkexec chili-clonedisk 
+  "Gerenciador da Área de Transferência ClipIt" EXEC clipit
+  "KCalc" EXEC kcalc
+  "KWrite" EXEC kwrite 
+  "Kate" EXEC kate -b 
+  "Localizador de aplicativos" EXEC xfce4-appfinder
+  "Onboard" EXEC onboard
+  "Spectacle" EXEC /usr/bin/spectacle
+  "Terminator" EXEC terminator
+  "Vim" EXEC xterm -e vim 
+ "Acessórios" END
+ "Configurações" MENU
+  "Configuração avançada de rede" EXEC nm-connection-editor
+  "Configurações do Onboard" EXEC onboard-settings
+  "Configurações do Terminal Xfce" EXEC xfce4-terminal --preferences
+  "Configurações do monitor" EXEC lxrandr
+  "Manjaro Settings Manager" EXEC manjaro-settings-manager
+  "Qt5 Settings" EXEC qt5ct
+  "WPrefs" EXEC WPrefs
+ "Configurações" END
+ "Desenvolvimento" MENU
+  "Console do UserFeedback" EXEC UserFeedbackConsole
+ "Desenvolvimento" END
+ "Escritório" MENU
+  "LibreOffice" EXEC libreoffice 
+  "LibreOffice Base" EXEC libreoffice --base 
+  "LibreOffice Calc" EXEC libreoffice --calc 
+  "LibreOffice Draw" EXEC libreoffice --draw 
+  "LibreOffice Impress" EXEC libreoffice --impress 
+  "LibreOffice Math" EXEC libreoffice --math 
+  "LibreOffice Writer" EXEC libreoffice --writer 
+ "Escritório" END
+ "Gráficos" MENU
+  "Gwenview" EXEC gwenview 
+  "Okular" EXEC okular 
+ "Gráficos" END
+ "Internet" MENU
+  "Brave" EXEC brave 
+  "Firefox" EXEC /usr/lib/firefox/firefox 
+  "Navegador de servidores SSH do Avahi" EXEC /usr/bin/bssh
+  "Navegador de servidores VNC do Avahi" EXEC /usr/bin/bvnc
+ "Internet" END
+ "Multimídia" MENU
+  "Helvum" EXEC helvum
+  "Qt V4L2 video capture utility" EXEC qvidcap
+  "Reprodutor de Mídias VLC" EXEC /usr/bin/vlc --started-from-file 
+  "Utilitário de teste V4L2" EXEC qv4l2
+  "Volume Icon" EXEC volumeicon
+ "Multimídia" END
+ "Sistema" MENU
+  "Adicionar/remover programas" EXEC pamac-manager 
+  "Dolphin" EXEC dolphin 
+  "Gerenciador de impressão" EXEC xdg-open http://localhost:631/
+  "Gerenciador de tarefas" EXEC xfce4-taskmanager
+  "Hardware Locality lstopo" EXEC lstopo
+  "Htop" EXEC xterm -e htop
+  "Informações e Testes do Sistema" EXEC /usr/bin/hardinfo
+  "Konsole" EXEC konsole
+  "Navegador Zeroconf do Avahi" EXEC /usr/bin/avahi-discover
+  "Timeshift" EXEC timeshift-launcher
+  "UXTerm" EXEC uxterm
+  "XTerm" EXEC xterm
+  "Xfce Terminal" EXEC xfce4-terminal
+  "btop++" EXEC xterm -e btop
+ "Sistema" END
+"Aplicativos" END

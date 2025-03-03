@@ -1,0 +1,66 @@
+@import 'colors.css';
+
+/* Configuration icons tray XFCE */
+#pulseaudio-button image { -gtk-icon-transform: scale(0.50); }
+#xfce4-power-manager-plugin image {-gtk-icon-transform: scale(0.50);}
+#xfce4-notification-plugin image {-gtk-icon-transform: scale(0.50);}
+#xfce4-clipman-plugin image { -gtk-icon-transform: scale(0.50); }
+
+/* Whisker Menu */
+#whiskermenu-window * {
+  border: 0px;
+  outline: none;
+  overflow: auto;
+  font-weight: normal;
+  text-shadow: none;
+}
+
+#whiskermenu-window {
+  background-color: rgba(50, 50, 50, 0.95);
+  border-radius: 15px 15px 0px 0px;
+}
+
+#whiskermenu-window button:focus,
+#whiskermenu-window button:hover,
+#whiskermenu-window button:active,
+#whiskermenu-window button:selected,
+#whiskermenu-window treeview:selected,
+#whiskermenu-window treeview:hover,
+#whiskermenu-window treeview:active,
+#whiskermenu-window treeview:focus
+{
+background: rgba(255, 255, 255, 0.15);
+transition: 200ms;
+}
+
+#whiskermenu-window treeview:focus {
+background: transparent;
+}
+#whiskermenu-window iconview{
+background: transparent;
+border-radius: 8px;
+}
+
+#whiskermenu-window button {
+padding-left: 15px;
+padding-right: 15px;
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+#whiskermenu-window iconview:hover{
+background: rgba(255, 255, 255, 0.15);
+transition: 200ms;
+}
+
+#whiskermenu-window iconview{
+background: transparent;
+border-radius: 10px;
+transition: 200ms;
+padding-left: 15px;
+padding-right: 15px;
+padding-top: 2px;
+padding-bottom: 2px;
+}
+
+.thunar > grid > toolbar * { -gtk-icon-transform: scale(0.7); }

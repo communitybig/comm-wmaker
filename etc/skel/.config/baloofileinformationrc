@@ -1,5 +1,5 @@
 [Misc]
-version=11
+version=13
 
 [Show]
 channels=false
@@ -8,30 +8,18 @@ contentCreated=false
 contentSize=false
 created=false
 depends=false
-description=false
 embeddedRating=false
 fileName=false
 fileSize=false
-generator=false
-imageDateTime=false
-imageOrientation=false
-kfileitem#accessed=false
+height=false
 kfileitem#group=false
-kfileitem#modified=false
 kfileitem#owner=false
 kfileitem#permissions=false
 lastModified=false
 lyrics=false
-manufacturer=false
 mimeType=false
-model=false
-photoDateTimeOriginal=false
-photoExposureBiasValue=false
-photoExposureTime=false
-photoFNumber=false
-photoFlash=false
-photoFocalLength=false
-photoISOSpeedRatings=false
+photoGpsLatitude=false
+photoGpsLongitude=false
 photoMeteringMode=false
 photoPixelXDimension=false
 photoPixelYDimension=false
@@ -43,3 +31,4 @@ replayGainAlbumPeak=false
 replayGainTrackGain=false
 replayGainTrackPeak=false
 url=false
+width=false

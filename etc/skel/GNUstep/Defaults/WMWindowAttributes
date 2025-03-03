@@ -1,21 +1,27 @@
 {
-  thunar.Thunar = {
+  "xfce4-appfinder.Xfce4-appfinder" = {
+    Icon = "xfce4-appfinder.Xfce4-appfinder.xpm";
+  };
+  dolphin.dolphin = {
     AlwaysUserIcon = Yes;
-    Icon = thunar.svg;
+    Icon = "file-manager.png";
   };
-  office.Office = {
-    Icon = office.svg;
+  soffice.Soffice = {
+    Icon = soffice.Soffice.xpm;
   };
-  brave.Brave = {
-    Icon = brave.svg;
+  firefox.Firefox = {
+    Icon = brave.brave.xpm;
   };
-  mousepad.Mousepad = {
+  kwrite.kwrite = {
+    Icon = kwrite.kwrite.xpm;
+  };
+  kcalc.kcalc = {
     AlwaysUserIcon = Yes;
-    Icon = editor.svg;
+    Icon = "accessories-calculator.png";
   };
-  galculator.Galculator = {
+  kate.kate = {
     AlwaysUserIcon = Yes;
-    Icon = "calc.svg";
+    Icon = kedit.png;
   };
   "pamac-manager.Pamac-manager" = {
     Icon = "pamac-manager.Pamac-manager.xpm";

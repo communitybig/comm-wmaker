@@ -86,6 +86,8 @@ Line Height Multiplier=1
 Schema=Normal
 Show Indentation Lines=false
 Show Whole Bracket Expression=false
+Text Font=monospace,9,-1,2,400,0,0,0,0,0,0,0,0,0,0,1
+Text Font Features=
 Word Wrap Marker=false
 
 [KTextEditor View]
@@ -137,8 +139,6 @@ Vi Relative Line Numbers=false
 Word Completion=true
 Word Completion Minimal Word Length=3
 Word Completion Remove Tail=true
-
-[KTextEditor::Search]
 
 [MainWindow]
 Height 952=480
