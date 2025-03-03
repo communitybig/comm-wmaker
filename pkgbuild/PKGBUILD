@@ -65,8 +65,9 @@ libxext
 libxpm
 qt6-charts
 cbatticon
-wmsmpmon
 )
+#wmsmpmon
+
 #makedepends=('')
 #optdepends=('')
 #conflicts=('')
