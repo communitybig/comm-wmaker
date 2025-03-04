@@ -17,7 +17,6 @@ polkit
 polkit-kde-agent
 autoconf
 imake
-brave-browser
 dolphin
 rootactions-servicemenu-biglinux
 libreoffice-fresh
@@ -58,10 +57,17 @@ grub-btrfs
 grub-btrfs-timeshift
 timeshift
 bash-completion
-big-skel
 firefox
 xfce4-terminal
+base-devel
+libx11
+libxext
+libxpm
+qt6-charts
+cbatticon
 )
+#wmsmpmon
+
 #makedepends=('')
 #optdepends=('')
 #conflicts=('')

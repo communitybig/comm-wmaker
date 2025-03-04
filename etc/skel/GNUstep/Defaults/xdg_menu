@@ -38,7 +38,6 @@
   "Okular" EXEC okular 
  "Gráficos" END
  "Internet" MENU
-  "Brave" EXEC brave 
   "Firefox" EXEC /usr/lib/firefox/firefox 
   "Navegador de servidores SSH do Avahi" EXEC /usr/bin/bssh
   "Navegador de servidores VNC do Avahi" EXEC /usr/bin/bvnc
