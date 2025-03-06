@@ -4,6 +4,8 @@ pkgname=comm-wmaker
 pkgdesc="Meta Package WindowMaker"
 # Uncomment and edit the following lines as needed
 depends=(
+comm-base-config
+auto-tweaks-browser
 windowmaker
 windowmaker-extra
 lxdm
