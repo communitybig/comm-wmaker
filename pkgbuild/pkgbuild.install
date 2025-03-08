@@ -17,14 +17,28 @@ export white="\033[1;37m"
 # Setting variables for bold and reset
 export bold="\033[1m"
 export reset="\033[0m"
+export pkgname=comm-wmaker
 
 msg() {
 	local msg="$1"
 	echo -e "${green}==>[comm-wmaker] ${bold}${yellow}${msg}${reset}" >&2
 }
 
+sh_load_optdepends() {
+	local info_file="/usr/share/${pkgname}/optdepends"
+
+	if [[ -f "$info_file" && -r "$info_file" ]]; then
+		mapfile -t OPTDEPENDS <"$info_file"
+	else
+		msg "${red}FATAL: Something went wrong! File '$info_file' not found or without read permission."
+		msg "${red}FATAL: Something went wrong! File '$info_file' not found or without read permission."
+	fi
+}
+
 post_install() {
-	msg "Initializing system configuration..."
+	msg "Initializing system installation and configuration..."
+
+	sh_load_optdepends
 
 	[[ -e /etc/environment ]] && source /etc/environment
 	: "${IN_CHROOT_INSTALLER:=false}"
@@ -43,12 +57,22 @@ post_install() {
 		lib32-vulkan-mesa-layers
 	)
 
+	synchronizing_database() {
+		pacman -Sy --quiet --noconfirm &>/dev/null
+	}
+
 	install_packages() {
 		pacman -S --quiet --noconfirm --needed --overwrite \* "$@" &>/dev/null
 	}
 
+	msg "Please wait, synchronizing databases..."
+	synchronizing_database
+
 	msg "Installing common packages: ${COMMON_PACKAGES[*]}"
 	install_packages "${COMMON_PACKAGES[@]}"
+
+	msg "Installing optdepends packages: ${OPTDEPENDS[*]}"
+	install_packages "${OPTDEPENDS[@]}"
 
 	msg "Detecting GPU and installing appropriate drivers..."
 	GPU_INFO=$(lspci -nnk | grep -A3 -E "VGA|3D|Display")
@@ -99,15 +123,15 @@ EOF
 
 	msg "Enabling Lxdm..."
 	if ! systemctl enable lxdm &>/dev/null; then
-    msg "${red}Error: It went wrong when activating lxdm"
+		msg "${red}Error: It went wrong when activating lxdm"
 	fi
 
 	msg "Setting up user..."
 	user=$(awk -F: '$3 >= 1000 && $3 < 65000 { print $1; exit }' /etc/passwd)
 	if $IN_CHROOT_INSTALLER; then
 		if [[ -n $IN_CHROOT_INSTALLER_USER || $IN_CHROOT_INSTALLER_USER != 'root' ]]; then
-  		user=$IN_CHROOT_INSTALLER_USER
-    fi
+			user=$IN_CHROOT_INSTALLER_USER
+		fi
 	fi
 	user_home=$(getent passwd "$user" | cut -d: -f6)
 
@@ -115,7 +139,7 @@ EOF
 	mkdir -p "$user_home" &>/dev/null
 	cp -Rfpa /etc/skel/. "$user_home/" &>/dev/null
 
-  msg "Setting user folder permissions in ${user_home}"
+	msg "Setting user folder permissions in ${user_home}"
 	chown -R "$user:$user" "$user_home" &>/dev/null
 
 	msg "Configuring Nautilus..."
