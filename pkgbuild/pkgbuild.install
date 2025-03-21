@@ -32,10 +32,8 @@ declare IS_UPGRADE=false                          # não alterar
 declare DM='lxdm'                                 # Display Manager/Login Manager
 declare WM='wmaker'                               # nome meta package
 declare pkgname=comm-"${WM}"                      # não alterar
-#declare servicesToEnable=("${DM}" sshd bluetooth) # insira aqui serviços a serem ATIVADOS
-#declare servicesToDisable=(lightdm sddm gdm)      #insira aqui os serviços a serem DESATIVADOS
-declare servicesToEnable=(sshd bluetooth) # insira aqui serviços a serem ATIVADOS
-declare servicesToDisable=(lxdm lightdm sddm gdm)      #insira aqui os serviços a serem DESATIVADOS
+declare servicesToEnable=("${DM}" sshd bluetooth) # insira aqui serviços a serem ATIVADOS
+declare servicesToDisable=(lightdm sddm gdm)      #insira aqui os serviços a serem DESATIVADOS
 ######################################################################################################
 
 msg() {
