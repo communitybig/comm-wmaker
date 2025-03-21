@@ -15,65 +15,70 @@ depends=(
 )
 optdepends=(
 	#chili-utils
-  windowmaker-extra
-	lxdm
-	lxdm-biglinux-theme
-	qt5ct
-	tango-icon-theme
-	numlockx
-	onboard
-	mousetweaks
-	polkit
-	polkit-kde-agent
-	autoconf
-	imake
-	dolphin
-	rootactions-servicemenu-biglinux
-	libreoffice-fresh
-	xterm
-	konsole
-	helvum
-	kate
-	kcalc
-	xorg-fonts-cyrillic
-	xorg-mkfontscale
-	network-manager-applet
-	wmclock
-	wmsystemtray
-	wmix
-	wmmemload
-	wmnd
-	wmautomenu-biglinux
-	lxrandr
-	notification-daemon
-	pamac-tray-icon-plasma
+	#chili-clonedisk
+	#chili-nanorc
+	#base-devel
 	ark
-	xorg-xkill
+	autoconf
+	bash-completion
 	bluedevil
-	manjaro-settings-manager
-	gwenview
-	spectacle
+	cbatticon
 	clipit
-	volumeicon
-	hardinfo-gtk3
-	okular
-	xfce4-settings
-	xfce4-appfinder
-	xfce4-notifyd
-	xfce4-taskmanager
-	noto-fonts-emoji
+	comm-base-config
+	dolphin
+	firefox
 	grub-btrfs
 	grub-btrfs-timeshift
-	timeshift
-	bash-completion
-	firefox
-	xfce4-terminal
-	base-devel
+	gwenview
+	hardinfo-gtk3
+	helvum
+	imake
+	kate
+	kcalc
+	konsole
+	libreoffice-fresh
 	libx11
 	libxext
 	libxpm
+	lxrandr
+	lxdm
+	lxdm-biglinux-theme
+	manjaro-settings-manager
+	mousetweaks
+	network-manager-applet
+	notification-daemon
+	noto-fonts-emoji
+	numlockx
+	okular
+	onboard
+	pamac-tray-icon-plasma
+	polkit
+	polkit-kde-agent
+	qt5ct
 	qt6-charts
-	cbatticon
+	rootactions-servicemenu-biglinux
+	sed
+	spectacle
+	tango-icon-theme
+	timeshift
+	volumeicon
+	wmautomenu-biglinux
+	wmclock
+	wmix
+	wmmemload
+	wmnd
+	wmsystemtray
+	windowmaker-extra
+	xfce4-appfinder
+	xfce4-notifyd
+	xfce4-settings
+	xfce4-taskmanager
+	xfce4-terminal
+	xorg-fonts-cyrillic
+	xorg-mkfontscale
+	xorg-xinit                # X.Org initialisation program
+	xorg-xkill
+	xterm                     # X Terminal Emulator
 	#wmsmpmon
 )
 
