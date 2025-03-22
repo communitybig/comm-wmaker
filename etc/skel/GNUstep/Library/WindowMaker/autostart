@@ -15,9 +15,9 @@
 # This file must be executable.
 #
 # When using "lxrandr" and saving the file it starts with the saved configuration.
-if [ -e "$HOME/.config/autostart/lxrandr-autostart.desktop" ];then
-    resolution=$(cat $HOME/.config/autostart/lxrandr-autostart.desktop | grep -i exec= | cut -d "'" -f2)
-    $resolution &
+if [ -e "$HOME/.config/autostart/lxrandr-autostart.desktop" ]; then
+	resolution=$(cat $HOME/.config/autostart/lxrandr-autostart.desktop | grep -i exec= | cut -d "'" -f2)
+	$resolution &
 fi
 
 sed -i 's|"custom_chrome_frame":true|"custom_chrome_frame":false|g' ~/.config/chromium/Default/Preferences ~/.config/google-chrome/Default/Preferences ~/.config/BraveSoftware/Brave-Browser/Default/Preferences
@@ -34,34 +34,31 @@ nm-applet &
 vbox=$(lspci | grep -i "virtualbox")
 qemu=$(lspci | grep -i "virtio")
 if [ -n "$vbox" ]; then
-    VBoxClient-all &
+	VBoxClient-all &
 fi
 if [ -n "$qemu" ]; then
-    spice-vdagent -x &
+	spice-vdagent -x &
 fi
 # There is a failure to start docks and systemtray, this if prevents this loading failure from happening
-if pgrep wmnd; then killall wmnd; fi
-if pgrep wmix; then killall wmix; fi
-if pgrep clipit; then killall clipit; fi
-if pgrep volumeicon; then killall volumeicon; fi
-if pgrep wmclock; then killall wmclock; fi
-if pgrep wmsystemtray; then killall wmsystemtray; fi
+if pgrep wmnd; then sudo killall wmnd; fi
+if pgrep wmix; then sudo killall wmix; fi
+if pgrep clipit; then sudo killall clipit; fi
+if pgrep volumeicon; then sudo killall volumeicon; fi
+if pgrep wmclock; then sudo killall wmclock; fi
+if pgrep wmsystemtray; then sudo killall wmsystemtray; fi
 sleep 4
 
 # Espera um pouco mais para garantir que o ambiente gráfico esteja pronto
 sleep 10
 
 # Dock Apps
-wmnd &            # Monitor de rede (mostra tráfego up/down)
-wmix &            # Mixer de áudio estilo dock (controle de volume)
-clipit &          # Gerenciador de área de transferência
-volumeicon &      # Ícone de volume no system tray
-wmclock &         # Relógio analógico/digital para o dock
-wmsystemtray &    # System tray para ícones de aplicativos
-cbatticon &       # Monitor de bateria (ideal para laptops)
-wmsmpmon &        # Monitor de recursos (CPU/RAM/swap em tempo real)
-
-
-
+wmnd &         # Monitor de rede (mostra tráfego up/down)
+wmix &         # Mixer de áudio estilo dock (controle de volume)
+clipit &       # Gerenciador de área de transferência
+volumeicon &   # Ícone de volume no system tray
+wmclock &      # Relógio analógico/digital para o dock
+wmsystemtray & # System tray para ícones de aplicativos
+cbatticon &    # Monitor de bateria (ideal para laptops)
+wmsmpmon &     # Monitor de recursos (CPU/RAM/swap em tempo real)
 
 xset m 20/10 4
