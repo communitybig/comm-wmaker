@@ -97,9 +97,29 @@ sh_start_dbus_in_chroot() {
 	fi
 }
 
+sh_copy_user_etc_usr_opt_files() {
+	msg "Configuring the package after installation/upgrade..."
+
+	# Copiar a estrutura para os diretórios de destino
+	local dirs=("usr" "etc" "opt")
+
+	for dir in "${dirs[@]}"; do
+		if [ -d "/usr/share/${pkgname}/${dir}" ]; then
+			# Copiar os arquivos e subdiretórios de /usr/share/${pkgname}/${dir} para o sistema
+			cp -a "/usr/share/${pkgname}/${dir}" "/"
+		fi
+	done
+	# Sobrescreve o arquivo plymouthd.conf com a versão do pacote
+	#cp -af /usr/lib/manjaro-tools/util-live.sh /usr/lib/manjaro-tools/util-live.sh.pacnew
+	#cp -af /usr/lib/manjaro-tools/util-live.sh.community /usr/lib/manjaro-tools/util-live.sh
+	#cp -af /usr/share/${pkgname}/usr/lib/manjaro-tools/util-live.sh.community /usr/lib/manjaro-tools/util-live.sh
+	#chmod +x /usr/lib/manjaro-tools/util-live.sh
+}
+
 post_install() {
 	msg "Initializing system installation and configuration..."
 
+	sh_copy_user_etc_usr_opt_files
 	sh_load_optdepends
 
 	[[ -e /etc/environment ]] && source /etc/environment

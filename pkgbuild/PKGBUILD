@@ -76,9 +76,9 @@ optdepends=(
 	xfce4-terminal
 	xorg-fonts-cyrillic
 	xorg-mkfontscale
-	xorg-xinit                # X.Org initialisation program
+	xorg-xinit # X.Org initialisation program
 	xorg-xkill
-	xterm                     # X Terminal Emulator
+	xterm # X Terminal Emulator
 	#wmsmpmon
 )
 
@@ -92,21 +92,15 @@ fi
 package() {
 	cd "${srcdir}/${pkgname}"
 
-	mkdir -p "${pkgdir}/usr/share/${pkgname}"
+	# mkdir -p "${pkgdir}/usr/share/${pkgname}"
+	install -dm755 "${pkgdir}/usr/share/${pkgname}"
 	printf "%s\n" "${optdepends[@]}" >"${pkgdir}/usr/share/${pkgname}/optdepends"
 
-	# Determine the correct source directory
-	if [ -d "${pkgname}" ]; then
-		srcdir="${srcdir}/${pkgname}/${pkgname}"
-	else
-		srcdir="${srcdir}/${pkgname}"
-	fi
-
-	# Install files
+	# Copiar a estrutura de /etc, /usr e /opt para /usr/share/${pkgname}
 	local dirs=("usr" "etc" "opt")
 	for dir in "${dirs[@]}"; do
-		if [ -d "${srcdir}/${dir}" ]; then
-			cp -a "${srcdir}/${dir}" "${pkgdir}/"
+		if [ -d "${srcdir}/${pkgname}/${dir}" ]; then
+			cp -a "${srcdir}/${pkgname}/${dir}" "${pkgdir}/usr/share/${pkgname}/"
 		fi
 	done
 
